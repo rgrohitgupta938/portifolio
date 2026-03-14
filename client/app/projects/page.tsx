@@ -14,6 +14,7 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     const fetchProjects = async () => {
+      console.log("API_BASE_URL:", API_BASE_URL);
       try {
         const response = await fetch(`${API_BASE_URL}/api/projects`);
 
