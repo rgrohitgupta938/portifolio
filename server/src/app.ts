@@ -8,9 +8,14 @@ import contactAdminRoutes from "./routes/contactAdminRoutes";
 
 const app = express();
 
-const allowedOrigins = ["http://localhost:3000", process.env.CLIENT_URL].filter(
-  Boolean,
-) as string[];
+const allowedOrigins = [
+  "http://localhost:3000",
+  process.env.CLIENT_URL,
+  "http://rohit-gupta.com",
+  "https://rohit-gupta.com",
+  "http://www.rohit-gupta.com",
+  "https://www.rohit-gupta.com",
+].filter(Boolean) as string[];
 
 app.use(
   cors({
